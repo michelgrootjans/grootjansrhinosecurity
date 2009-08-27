@@ -1,7 +1,6 @@
 using System;
 using Castle.MicroKernel.Registration;
 using Castle.Windsor;
-using HibernatingRhinos.NHibernate.Profiler.Appender;
 using NHibernate;
 using NUnit.Framework;
 using Rhino.Commons;
@@ -95,7 +94,7 @@ namespace RhinoSecurity
 
             //Generate DB Schema Script            
             new DbSchema().Generate(container);
-            NHibernateProfiler.Initialize();
+            //NHibernateProfiler.Initialize();
 
             //Initilize Rhino Commons basing on the container
             IoC.Initialize(container);
